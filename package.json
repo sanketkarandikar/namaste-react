@@ -1,0 +1,28 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is the app made for learning react.",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanketkarandikar/namaste-react.git"
+  },
+  "keywords": [
+    "react",
+    "learning",
+    "sanket",
+    "karandikar"
+  ],
+  "author": "Sanket Karandikar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanketkarandikar/namaste-react/issues"
+  },
+  "homepage": "https://github.com/sanketkarandikar/namaste-react#readme",
+  "dependencies": {
+    "parcel": "^2.10.2"
+  }
+}
