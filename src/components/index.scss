@@ -7,20 +7,6 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid #ececec;
-    ul {
-            display: flex;
-            padding: 0;
-            li {
-                    list-style-type: none;
-                    margin: 0 10px;
-                }
-        }
-}
-.logo {
-    height: 50px;
-    width: 50px;
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
 }
