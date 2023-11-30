@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useEffect, useLayoutEffect, useState} from "react";
 
 import Header from './Header';
 import Restaurant from "./Restaurant";
 
 
-const restaurants = [
+const restaurantsArray = [
     {
         "type": "restaurant",
         "info": {
@@ -1810,10 +1810,27 @@ const restaurants = [
 ]
 
 const AppLayout = () => {
+    const [restaurants, setRestaurants] = useState(restaurantsArray);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    useLayoutEffect(() => {
+        console.log('use layout effect');
+    }, [])
+    const filterRestaurants = () => {
+        setRestaurants(restaurants.filter((res) => +res.info.rating.aggregate_rating > 4));
+    }
+
+    const fetchData = async () => {
+        const data = await fetch('http://localhost:3000/restaurants');
+        console.log(data);
+    }
     return (
         <div className="app">
             <Header />
-            <button onClick={() => { console.log(123) }}>Top rated restaurants</button>
+            <button onClick={filterRestaurants}>Top rated restaurants</button>
             <div className="res-container">
                 {
                     restaurants.map((restaurant, idx) => {

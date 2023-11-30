@@ -4,7 +4,7 @@
   "description": "This is the app made for learning react.",
   "main": "App.js",
   "scripts": {
-    "dev": "parcel index.html",
+    "start": "parcel index.html",
     "test": "jest"
   },
   "repository": {
