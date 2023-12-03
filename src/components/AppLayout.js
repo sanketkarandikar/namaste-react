@@ -1813,11 +1813,11 @@ const AppLayout = () => {
     const [restaurants, setRestaurants] = useState(restaurantsArray);
 
     useEffect(() => {
-        fetchData();
+        console.log('in useEffect');
     }, []);
 
     useLayoutEffect(() => {
-        console.log('use layout effect');
+         fetchData();
     }, [])
     const filterRestaurants = () => {
         setRestaurants(restaurants.filter((res) => +res.info.rating.aggregate_rating > 4));

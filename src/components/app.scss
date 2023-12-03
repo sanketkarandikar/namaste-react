@@ -6,9 +6,9 @@
     ul {
         display: flex;
         padding: 0;
-
+        cursor: pointer;
         li {
-            cursor: pointer;
+            
             list-style-type: none;
             margin: 0 10px;
         }
