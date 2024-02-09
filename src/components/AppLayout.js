@@ -1,6 +1,5 @@
 import React, {useEffect, useLayoutEffect, useState} from "react";
 
-import Header from './Header';
 import Restaurant from "./Restaurant";
 
 
@@ -1829,7 +1828,6 @@ const AppLayout = () => {
     }
     return (
         <div className="app">
-            <Header />
             <button onClick={filterRestaurants}>Top rated restaurants</button>
             <div className="res-container">
                 {

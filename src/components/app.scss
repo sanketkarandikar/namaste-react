@@ -23,7 +23,8 @@
 .res-container {
     margin: 25px;
     display: flex;
-        flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
     .card {
         margin: 10px;
         border-radius: 10px;
