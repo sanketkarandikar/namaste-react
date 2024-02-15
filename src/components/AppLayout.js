@@ -1,6 +1,8 @@
 import React, {useEffect, useLayoutEffect, useState} from "react";
 
 import Restaurant from "./Restaurant";
+import { Link } from "react-router-dom";
+import WithLabelResDetails from './WithLabelResDetails';
 
 
 const restaurantsArray = [
@@ -121,7 +123,7 @@ const restaurantsArray = [
             "clickActionDeeplink": ""
         },
         "distance": "568 m",
-        "isPromoted": false,
+        "isPromoted": true,
         "promotedText": "",
         "trackingData": [
             {
@@ -532,7 +534,7 @@ const restaurantsArray = [
             "clickActionDeeplink": ""
         },
         "distance": "2.9 km",
-        "isPromoted": false,
+        "isPromoted": true,
         "promotedText": "",
         "trackingData": [
             {
@@ -1823,16 +1825,22 @@ const AppLayout = () => {
     }
 
     const fetchData = async () => {
-        const data = await fetch('http://localhost:3000/restaurants');
+        const data = restaurantsArray;//await fetch('http://localhost:3000/restaurants');
         console.log(data);
     }
+
+    const ResWithlabel = WithLabelResDetails(Restaurant)
     return (
         <div className="app">
             <button onClick={filterRestaurants}>Top rated restaurants</button>
             <div className="res-container">
                 {
                     restaurants.map((restaurant, idx) => {
-                        return <Restaurant key={idx} data={restaurant}/>
+                        return <>
+                        <Link to={`/restaurant/${restaurant.info.resId}`}>
+                            {restaurant.isPromoted ? <ResWithlabel {...restaurant}/> : <Restaurant key={idx} data={restaurant}/>}
+                        </Link>
+                        </>
                     })
                 }
             </div>

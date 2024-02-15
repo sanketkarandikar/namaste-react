@@ -6,6 +6,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import Header from './Header';
 import AboutUs from "./aboutUs";
 import Grocery from "./Grocery";
+import RestaurantDetails from "./RestaurantDetails";
 
 const Layout = () => {
     return (
@@ -28,6 +29,10 @@ const appRouter = createBrowserRouter([
         }, {
         path: '/grocery',
         element: <Grocery/>
+        },
+        {
+            path: '/restaurant/:id',
+            element: <RestaurantDetails/>
         }
         ]
     }, ])
