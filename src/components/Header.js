@@ -1,9 +1,13 @@
 
-import React from "react";
+import React, { useContext } from "react";
 import logo from '../images/food-logo.png';
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
+
+    const {name} = useContext(UserContext);
+
     return (
         <div className="header">
             <div className="logo-container">
@@ -15,6 +19,7 @@ const Header = () => {
                     <li><Link to="/about-us">About Us</Link></li>
                     <li><Link to="/cart">Cart</Link></li>
                     <li><Link><button>Login</button></Link></li>
+                    <li><b>{name}</b></li>
                 </ul>
             </div>
         </div>

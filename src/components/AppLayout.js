@@ -1829,7 +1829,7 @@ const AppLayout = () => {
         console.log(data);
     }
 
-    const ResWithlabel = WithLabelResDetails(Restaurant)
+    const ResWithlabel = WithLabelResDetails();
     return (
         <div className="app">
             <button onClick={filterRestaurants}>Top rated restaurants</button>

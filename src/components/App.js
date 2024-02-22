@@ -7,12 +7,15 @@ import Header from './Header';
 import AboutUs from "./aboutUs";
 import Grocery from "./Grocery";
 import RestaurantDetails from "./RestaurantDetails";
+import AppStore from "../redux/AppStore";
 
 const Layout = () => {
     return (
         <>
+        <Provider store={AppStore}>
             <Header />
             <Outlet/>
+            </Provider>
         </>
     )
 }
