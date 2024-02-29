@@ -21,7 +21,6 @@ const Restaurant = (props) => {
                     {order.deliveryTime}
                 </div>
             </div>
-            
         </div>
         </div>
     )

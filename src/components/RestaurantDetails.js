@@ -1,6 +1,15 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { addItem } from '../redux/cartSlice';
 
 const RestaurantDetails = () => {
+
+  const dispatch = useDispatch();
+
+  const addItemsToCart = () => {
+    dispatch(addItem('hello'));
+  }
+
   return (
     <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
     <div>
@@ -15,6 +24,7 @@ const RestaurantDetails = () => {
     <div>
         Address
     </div>
+    <button onClick={addItemsToCart}>Add items</button>
     </div>
   )
 }

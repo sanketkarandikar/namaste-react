@@ -8,6 +8,7 @@ import AboutUs from "./aboutUs";
 import Grocery from "./Grocery";
 import RestaurantDetails from "./RestaurantDetails";
 import AppStore from "../redux/AppStore";
+import { Provider } from "react-redux";
 
 const Layout = () => {
     return (

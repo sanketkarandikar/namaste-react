@@ -1836,11 +1836,11 @@ const AppLayout = () => {
             <div className="res-container">
                 {
                     restaurants.map((restaurant, idx) => {
-                        return <>
+                        return (<>
                         <Link to={`/restaurant/${restaurant.info.resId}`}>
                             {restaurant.isPromoted ? <ResWithlabel {...restaurant}/> : <Restaurant key={idx} data={restaurant}/>}
                         </Link>
-                        </>
+                        </>)
                     })
                 }
             </div>
